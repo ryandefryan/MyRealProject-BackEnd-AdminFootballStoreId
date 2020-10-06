@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "ab901506-49d0-4fd8-9cdd-0ed4de1bd33b",
+		"name": "Upload File System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Single Upload File Image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/E:/Purwadhika Digital Technology School/BackEnd/UploadFile_System/supports/images/New Balance 1.2.jpg"
+						},
+						{
+							"key": "data",
+							"value": "{\"name\": \"New Balance Nigerian Pack Orange/Green\", \"brand\": \"New Balance\", \"category\": \"Football Boots\", \"price\": 5500000, \"discount\": 10, \"stock\": 20, \"sold\": 0}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/single-upload-product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"single-upload-product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Multiple Upload File Image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": [
+								"/E:/Purwadhika Digital Technology School/BackEnd/UploadFile_System/supports/images/New Balance 1.1.jpg",
+								"/E:/Purwadhika Digital Technology School/BackEnd/UploadFile_System/supports/images/New Balance 1.2.jpg"
+							]
+						},
+						{
+							"key": "data",
+							"value": "{\"name\": \"New Balance Nigerian Pack Orange/Green\", \"brand\": \"New Balance\", \"category\": \"Football Boots\", \"price\": 5500000, \"discount\": 10, \"stock\": 20, \"sold\": 0}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/multiple-upload-product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"multiple-upload-product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:5000/delete-product/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"delete-product",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": [
+								"/E:/Purwadhika Digital Technology School/BackEnd/UploadFile_System/supports/images/Nike Mercurial 1.1.jpg",
+								"/E:/Purwadhika Digital Technology School/BackEnd/UploadFile_System/supports/images/Nike Mercurial 1.2.jpg"
+							]
+						},
+						{
+							"key": "data",
+							"value": "{\"name\": \"Nike Mercurial\", \"brand\": \"Nike\", \"category\": \"Football Boots\", \"price\": 7250000, \"discount\": 10, \"stock\": 5, \"sold\": 0}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/update-product/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"update-product",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
